@@ -281,8 +281,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-family: "Poppins", sans-serif;
@@ -312,13 +313,18 @@ header {
 }
 
 @media screen and (max-width: 953px) {
+  .about__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .about__container--left img {
     height: 350px;
     width: 350px;
   }
   .about__container--right {
     margin-top: 40px;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -401,6 +407,26 @@ header {
   text-align: center;
 }
 
+.card:hover {
+  background-color: crimson;
+}
+
+.card:hover i {
+  color: #fff;
+}
+
+.animation-scale {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.animation-scale:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 @media screen and (max-width: 997px) {
   .services__container {
     -ms-grid-columns: (1fr)[2];
@@ -441,6 +467,61 @@ header {
     -ms-grid-row: 3;
     grid-row: 3;
   }
+}
+
+/* ==|====================
+   Layout/Section skills
+   ======================= */
+#skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0 100px 0;
+}
+
+.title--skills::after {
+  content: 'what i know';
+  width: 125px;
+}
+
+.skills__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+.skills__container--left {
+  width: 50%;
+}
+
+.skills__container--left h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills__container--left p {
+  text-align: justify;
+}
+
+.skills__container--right {
+  width: 50%;
 }
 
 /* ==|====================

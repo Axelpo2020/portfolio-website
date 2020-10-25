@@ -13,7 +13,7 @@
 .about__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     font-family: $font-secondary;
     height: 100%;
@@ -34,15 +34,16 @@
         font-weight: 600;
         margin-bottom: 10px;
     }
-
     p {
         text-align: justify;
     }
-
     width: 50%;
 }
 
 @media screen and (max-width: 953px) {
+    .about__container {
+        justify-content: center;
+    }
     .about__container--left {
         img {
         height: 350px;
@@ -51,7 +52,7 @@
     }
     .about__container--right {
         margin-top: 40px;
-        width: 90%;
+        width: 100%;
     }
 }
 

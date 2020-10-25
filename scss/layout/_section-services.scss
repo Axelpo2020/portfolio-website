@@ -53,6 +53,19 @@
         font-weight: normal;
         text-align: center;
     }
+    &:hover {
+        background-color: crimson;
+        i {
+            color: #fff;
+        }
+    }
+}
+.animation-scale {
+    transition: all 0.3s ease;
+}
+.animation-scale:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 997px) {
