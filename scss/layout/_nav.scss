@@ -1,3 +1,37 @@
 /* ==|====================
    Layout/Nav
    ======================= */
+
+nav.topbar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 80%;
+   margin: auto;
+   height: 100px;
+   max-width: 1300px;
+   background-color: rosybrown;
+   z-index: 999;
+}
+
+.logo {
+   h1 {
+   color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+   }
+   span {
+   color: crimson;
+    transition: all 0.3s ease;
+   }
+}
+
+ul.nav-links {
+   display: flex;
+   a {
+      font-size: 18px;
+      font-weight: 500;
+      margin-left: 25px;
+      transition: color 0.3s ease;
+   }
+}

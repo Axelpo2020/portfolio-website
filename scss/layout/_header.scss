@@ -2,3 +2,26 @@
    Layout/Header
    ======================= */
 
+header {
+   background: url('../images/banner.jpg') no-repeat center;
+   background-size: cover;
+   background-attachment: fixed;
+   height: 100vh;
+}
+
+
+
+.header-content {
+   width: 50%;
+   color: #fff;
+   background-color: blue;
+
+   .text-1 {
+      font-size: 27px;
+   }
+
+   .text-2 {
+      font-size: 75px;
+      font-weight: 600;
+   }
+}
