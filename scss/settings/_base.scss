@@ -29,5 +29,13 @@ a {
    transition: all 0.3s ease;
    &:hover {
       background: transparent;
+      color: crimson;
+   }
+}
+
+@media screen and (max-width: 996px) {
+   .btn {
+      padding: 10px 30px;
+      font-size: 20px;
    }
 }

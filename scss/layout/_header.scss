@@ -1,7 +1,6 @@
 /* ==|====================
    Layout/Header
    ======================= */
-
 header {
    display: flex;
    align-items: center;
@@ -11,17 +10,13 @@ header {
    height: 100vh;
 }
 
-
-
 .header-content {
    margin-left: 100px;
    width: 50%;
    color: #fff;
-
    .text-1 {
       font-size: 27px;
    }
-
    .text-2 {
       font-size: 75px;
       font-weight: 600;
