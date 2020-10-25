@@ -7,13 +7,31 @@ html {
 }
 
 body {
-  background-color: red;
+  background-color: #fff;
   font-family: "Ubuntu", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: transparent;
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -72,6 +90,7 @@ td:not([align]), th:not([align]) {
    Layout/Nav
    ======================= */
 nav.topbar {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +104,6 @@ nav.topbar {
   margin: auto;
   height: 100px;
   max-width: 1300px;
-  background-color: rosybrown;
   z-index: 999;
 }
 
@@ -119,6 +137,12 @@ ul.nav-links a {
    Layout/Header
    ======================= */
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: url("../images/banner.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
@@ -126,9 +150,9 @@ header {
 }
 
 .header-content {
+  margin-left: 100px;
   width: 50%;
   color: #fff;
-  background-color: blue;
 }
 
 .header-content .text-1 {
@@ -138,6 +162,40 @@ header {
 .header-content .text-2 {
   font-size: 75px;
   font-weight: 600;
+  margin-left: -3px;
+}
+
+.header-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 996px) {
+  .header-content {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 563px) {
+  .header-content .text-2 {
+    font-size: 50px;
+  }
+  .header-content .text-3 {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header-content .text-1 {
+    font-size: 19px;
+  }
+  .header-content .text-2 {
+    font-size: 35px;
+  }
+  .header-content .text-3 {
+    font-size: 22px;
+  }
 }
 
 /* ==|====================

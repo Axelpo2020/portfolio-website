@@ -3,6 +3,7 @@
    ======================= */
 
 nav.topbar {
+   position: fixed;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -10,7 +11,6 @@ nav.topbar {
    margin: auto;
    height: 100px;
    max-width: 1300px;
-   background-color: rosybrown;
    z-index: 999;
 }
 

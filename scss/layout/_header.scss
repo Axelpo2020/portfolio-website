@@ -3,6 +3,8 @@
    ======================= */
 
 header {
+   display: flex;
+   align-items: center;
    background: url('../images/banner.jpg') no-repeat center;
    background-size: cover;
    background-attachment: fixed;
@@ -12,9 +14,9 @@ header {
 
 
 .header-content {
+   margin-left: 100px;
    width: 50%;
    color: #fff;
-   background-color: blue;
 
    .text-1 {
       font-size: 27px;
@@ -23,5 +25,39 @@ header {
    .text-2 {
       font-size: 75px;
       font-weight: 600;
+      margin-left: -3px;
+   }
+   .text-3 {
+      font-size: 40px;
+      margin: 5px 0;
+   }
+}
+
+@media screen and (max-width: 996px) {
+   .header-content {
+      width: 90%;
+      margin: auto;
+   }
+}
+
+@media screen and (max-width: 563px) {
+   .header-content .text-2 {
+      font-size: 50px;
+   }
+   .header-content .text-3 {
+      font-size: 27px;
+   }
+}
+
+//For iphone 5
+@media screen and (max-width: 350px) {
+   .header-content .text-1 {
+      font-size: 19px;
+   }
+   .header-content .text-2 {
+      font-size: 35px;
+   }
+   .header-content .text-3 {
+      font-size: 22px;
    }
 }
