@@ -1,0 +1,88 @@
+/* ==|====================
+   Layout/Section services
+   ======================= */
+
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    padding: 100px 0 100px 0;
+}
+
+.title--services {
+    color: #fff;
+}
+.title--services::after {
+    content: 'what i provide';
+    width: 150px;
+    background: #111;
+}
+.title--services::before {
+    background: #fff;
+}
+
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 25px;
+    min-height: 230px;
+}
+
+.card {
+    background-color: #222;
+    text-align: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    color: #fff;
+    i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+    }
+    h1 {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 15px 0;
+    }
+    p {
+        font-size: 19px;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .services__container {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .card-1 {
+        grid-column: 1;
+    }
+    .card-2 {
+        grid-column: 2;
+    }
+
+}
+
+@media screen and (max-width:692px) {
+    .services__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+    .card-1 {
+        grid-row: 1;
+    }
+    .card-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .card-3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}

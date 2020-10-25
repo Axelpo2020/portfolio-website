@@ -28,6 +28,10 @@ header {
    }
 }
 
+.btn--header {
+   padding: 12px 36px;
+}
+
 @media screen and (max-width: 996px) {
    .header-content {
       width: 90%;

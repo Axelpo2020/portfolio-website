@@ -11,6 +11,17 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+.width {
+  width: 80%;
+  max-width: 1300px;
+}
+
+@media screen and (max-width: 1400px) {
+  .width {
+    width: 90%;
+  }
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -20,8 +31,8 @@ a {
   display: inline-block;
   background: crimson;
   color: #fff;
-  font-size: 25px;
-  padding: 12px 36px;
+  font-size: 20px;
+  padding: 10px 30px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
@@ -40,6 +51,41 @@ a {
     padding: 10px 30px;
     font-size: 20px;
   }
+}
+
+.title {
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.title::after {
+  content: "who i am";
+  position: absolute;
+  width: 100px;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 0 5px;
+  background: #fff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -178,6 +224,10 @@ header {
   margin: 5px 0;
 }
 
+.btn--header {
+  padding: 12px 36px;
+}
+
 @media screen and (max-width: 996px) {
   .header-content {
     width: 90%;
@@ -203,6 +253,193 @@ header {
   }
   .header-content .text-3 {
     font-size: 22px;
+  }
+}
+
+/* ==|====================
+   Layout/Section about
+   ======================= */
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  padding: 100px 0 100px 0;
+}
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+.about__container--left img {
+  height: 400px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+
+.about__container--right {
+  width: 50%;
+}
+
+.about__container--right h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about__container--right p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 953px) {
+  .about__container--left img {
+    height: 350px;
+    width: 350px;
+  }
+  .about__container--right {
+    margin-top: 40px;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 563px) {
+  .about__container--right h3 {
+    font-size: 19px;
+  }
+}
+
+/* ==|====================
+   Layout/Section services
+   ======================= */
+#services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #111;
+  padding: 100px 0 100px 0;
+}
+
+.title--services {
+  color: #fff;
+}
+
+.title--services::after {
+  content: 'what i provide';
+  width: 150px;
+  background: #111;
+}
+
+.title--services::before {
+  background: #fff;
+}
+
+.services__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 25px;
+  min-height: 230px;
+}
+
+.card {
+  background-color: #222;
+  text-align: center;
+  padding: 20px 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.card i {
+  font-size: 50px;
+  color: crimson;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.card h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 15px 0;
+}
+
+.card p {
+  font-size: 19px;
+  font-weight: normal;
+  text-align: center;
+}
+
+@media screen and (max-width: 997px) {
+  .services__container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .card-1 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .card-2 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+}
+
+@media screen and (max-width: 692px) {
+  .services__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .card-1 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .card-2 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .card-3 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 3;
+    grid-row: 3;
   }
 }
 

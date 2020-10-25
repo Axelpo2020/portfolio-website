@@ -1,0 +1,64 @@
+/* ==|====================
+   Layout/Section about
+   ======================= */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 100px 0 100px 0;
+}
+
+.about__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: $font-secondary;
+    height: 100%;
+}
+
+.about__container--left {
+    img {
+        height: 400px;
+        width: 400px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+}
+
+.about__container--right {
+    h3 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    width: 50%;
+}
+
+@media screen and (max-width: 953px) {
+    .about__container--left {
+        img {
+        height: 350px;
+        width: 350px;
+        }
+    }
+    .about__container--right {
+        margin-top: 40px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 563px) {
+    .about__container--right {
+        h3 {
+            font-size: 19px;
+        }
+    }
+}
