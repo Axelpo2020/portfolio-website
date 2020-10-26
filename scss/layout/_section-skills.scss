@@ -17,8 +17,7 @@
 .skills__container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
     font-family: $font-secondary;
     height: 100%;
 }
@@ -29,15 +28,66 @@
         font-weight: 600;
         margin-bottom: 10px;
     }
-
     p {
         text-align: justify;
     }
-
-    width: 50%;
+    width: 45%;
 }
 
 .skills__container--right {
+    width: 45%;
+    .bars {
+    margin-bottom: 15px;
+    }
+    .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    span {
+    font-weight: 500;
+    font-size: 18px;
+    }
+    }
+    .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+    }
+    .line::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: crimson;
+    }
+    .html::before {
+        width: 90%;
+    }
+    .css::before {
+        width: 60%;
+    }
+    .js::before {
+        width: 80%;
+    }
+    .php::before {
+        width: 50%;
+    }
+    .sql::before {
+        width: 70%;
+    }
+}
 
-    width: 50%;
+@media screen and (max-width:997px) {
+    .skills__container {
+        flex-direction: column;
+    }
+    .skills__container--left , .skills__container--right {
+        width: 100%;
+    }
+    .skills__container--left {
+        margin-bottom: 35px;
+    }
 }

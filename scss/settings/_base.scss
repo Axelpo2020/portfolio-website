@@ -32,10 +32,10 @@ a {
    display: inline-block;
    background: crimson;
    color: #fff;
-   font-size: 20px;
-   padding: 10px 30px;
+   font-size: 18px;
+   padding: 8px 16px;
    margin-top: 20px;
-   font-weight: 400;
+   font-weight: 500;
    border-radius: 6px;
    border: 2px solid crimson;
    transition: all 0.3s ease;
@@ -46,7 +46,7 @@ a {
 }
 
 @media screen and (max-width: 996px) {
-   .btn {
+   .btn--header {
       padding: 10px 30px;
       font-size: 20px;
    }
