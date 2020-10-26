@@ -24,22 +24,21 @@ nav {
     font-size: 35px;
     font-weight: 600;
    }
-}
-
-.span-topbar {
-   color: crimson;
-    transition: all 0.3s ease;
-}
-
-.white {
-   color: #fff;
+   span {
+      color: crimson;
+      transition: all 0.3s ease;
+   }
 }
 
 .sticky {
    background-color: crimson;
 }
 
-ul.nav-links {
+nav.sticky span {
+   color: #fff;
+}
+
+.nav-links {
    display: flex;
    a {
       font-size: 18px;
@@ -50,9 +49,9 @@ ul.nav-links {
          color: crimson;
       }
    }
-   a .sticky {
-      &:hover {
-         color: yellow;
-      }
-   }
 }
+
+.sticky .nav-links li a:hover {
+   color: #fff;
+}
+

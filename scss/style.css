@@ -196,27 +196,27 @@ nav {
   font-weight: 600;
 }
 
-.span-topbar {
+.logo span {
   color: crimson;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
-.white {
-  color: #fff;
 }
 
 .sticky {
   background-color: crimson;
 }
 
-ul.nav-links {
+nav.sticky span {
+  color: #fff;
+}
+
+.nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-ul.nav-links a {
+.nav-links a {
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
@@ -224,12 +224,12 @@ ul.nav-links a {
   transition: color 0.3s ease;
 }
 
-ul.nav-links a:hover {
+.nav-links a:hover {
   color: crimson;
 }
 
-ul.nav-links a .sticky:hover {
-  color: yellow;
+.sticky .nav-links li a:hover {
+  color: #fff;
 }
 
 /* ==|====================
@@ -267,6 +267,11 @@ header {
 .header-content .text-3 {
   font-size: 40px;
   margin: 5px 0;
+}
+
+.header-content .text-3 span {
+  color: crimson;
+  font-weight: 500;
 }
 
 .btn--header {
@@ -345,6 +350,10 @@ header {
 
 .about__container--right {
   width: 50%;
+}
+
+.about__container--right span {
+  color: crimson;
 }
 
 .about__container--right p {
@@ -951,4 +960,73 @@ footer {
 /* ===========================
    Menu hamburger
    =========================== */
+.menu-btn {
+  display: none;
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .nav-links {
+    position: fixed;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .nav-links a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .active.nav-links {
+    left: 0;
+  }
+  .active i::before {
+    content: "\f00d";
+  }
+}
+
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: crimson;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
 /*# sourceMappingURL=style.css.map */

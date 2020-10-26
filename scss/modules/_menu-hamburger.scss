@@ -1,3 +1,40 @@
 /* ===========================
    Menu hamburger
    =========================== */
+   .menu-btn{
+      display: none;
+      color: #fff;
+      font-size: 23px;
+      cursor: pointer;
+  }
+
+@media screen and (max-width: 947px) {
+   .menu-btn {
+      display: block;
+      z-index: 999;
+   }
+   .nav-links {
+      position: fixed;
+      display: block;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background: #111;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+      a {
+         display: inline-block;
+         margin: 20px 0;
+         font-size: 25px;
+      }
+   }
+   .active.nav-links {
+      left: 0;
+   }
+   .active i::before {
+      content: "\f00d";
+   }
+}
+
