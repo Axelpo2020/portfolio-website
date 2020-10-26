@@ -1,3 +1,18 @@
+//animation nav bar 
+const nav = document.querySelector('nav');
+const span = document.querySelector('.span-topbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+        nav.classList.add('sticky');
+        span.classList.add('white');
+    } else {
+        nav.classList.remove('sticky');
+        span.classList.remove('white');
+    }
+})
+
+    
     // owl carousel script
     $('.carousel').owlCarousel({
     margin: 20,

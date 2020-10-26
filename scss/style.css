@@ -1,4 +1,21 @@
 /* Site settings */
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* ===========================
    Base
    =========================== */
@@ -150,34 +167,47 @@ td:not([align]), th:not([align]) {
 /* ==|====================
    Layout/Nav
    ======================= */
-nav.topbar {
+nav {
   position: fixed;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.topbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100px;
+  max-width: 1300px;
+  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 80%;
-  margin: auto;
-  height: 100px;
-  max-width: 1300px;
-  z-index: 999;
 }
 
-.logo h1 {
+.logo a {
   color: #fff;
   font-size: 35px;
   font-weight: 600;
 }
 
-.logo span {
+.span-topbar {
   color: crimson;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.white {
+  color: #fff;
+}
+
+.sticky {
+  background-color: crimson;
 }
 
 ul.nav-links {
@@ -192,6 +222,14 @@ ul.nav-links a {
   margin-left: 25px;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+}
+
+ul.nav-links a:hover {
+  color: crimson;
+}
+
+ul.nav-links a .sticky:hover {
+  color: yellow;
 }
 
 /* ==|====================
