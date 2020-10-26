@@ -1,3 +1,16 @@
 /* ==|====================
    Layout/Footer
    ======================= */
+footer {
+   background: #111;
+   padding: 15px 23px;
+   color: #fff;
+   text-align: center;
+}
+
+.footer-author {
+   color: crimson;
+   &:hover {
+      text-decoration: underline;
+   }
+}

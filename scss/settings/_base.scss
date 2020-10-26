@@ -28,6 +28,12 @@ a {
    color: #fff;
 }
 
+.h3 {
+   font-size: 25px;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
 .btn {
    display: inline-block;
    background: crimson;
@@ -40,6 +46,7 @@ a {
    border: 2px solid crimson;
    transition: all 0.3s ease;
    &:hover {
+      cursor: pointer;
       background: transparent;
       color: crimson;
    }

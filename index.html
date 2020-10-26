@@ -28,6 +28,7 @@
             <li><a href='#services'>Services</a></li>
             <li><a href='#skills'>Skills</a></li>
             <li><a href='#teams'>Teams</a></li>
+            <li><a href='#contact'>Contact</a></li>
         </ul>
     </nav>
     <header>
@@ -46,7 +47,7 @@
                 <img src='images/profile-1.jpeg' alt='photo de profil' />
             </div>
             <div class="about__container--right">
-                <h3>I'm Prakash and I'm a</h3>
+                <h3 class='h3'>I'm Prakash and I'm a</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem
                     excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias
                     fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab
@@ -89,7 +90,7 @@
         <h2 class='title title--skills'>My skills</h2>
         <div class="skills__container width">
             <div class="skills__container--left">
-                <h3>My creative skills & experiences.</h3>
+                <h3 class='h3'>My creative skills & experiences.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae
                     consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae
                     laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem
@@ -179,10 +180,57 @@
                 </div>
             </div>
         </div>
-
     </section>
 
+    <section id='contact'>
+        <h2 class='title title--contact'>Contact Me</h2>
+        <div class="contact__container width">
+            <div class="contact__container--left">
+                <h3 class='h3'>Get in touch</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+                <div class="contact-container">
+                    <div class="row">
+                        <i class="fas fa-user"></i>
+                        <div class="info">
+                            <div class="head">Name</div>
+                            <div class="sub-title">Prakash Shahi</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info">
+                            <div class="head">Address</div>
+                            <div class="sub-title">Surkhet, Nepal</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info">
+                            <div class="head">Email</div>
+                            <div class="sub-title">abc@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="contact__container--right">
+            <h3 class='h3'>Message me</h3>     
+            <from action='#'>
+                <div class="grid">
+                    <input class='field field-name' type='text' placeholder="Name" required>
+                    <input class='field field-email' type='text' placeholder="Email" required>
+                    <input class='field field-topic' type="text" placeholder="Subject" required>
+                    <textarea class='field field-message' cols="30" rows="10" placeholder="Message.." required></textarea>
+                </div>
+                <button class='input-btn btn' type='submit'>Send message</button>
+            </from>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Created By <a class='footer-author' href='https://github.com/Axelpo2020' target="_blank">Axel Po</a> | &copy; 2020 All rights reserved.
+    </footer>
     <script src='script.js'></script>
 </body>
 </html>
